@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.user:hover {
+  background: transparent;
+}
+
+body
+  > div.container-fluid.d-flex.align-items-center.justify-content-center
+  > div {
+  width: clamp(200px, 80%, 840px);
+}
+
+#accordionExample {
+  width: clamp(200px, 80%, 840px);
+}
