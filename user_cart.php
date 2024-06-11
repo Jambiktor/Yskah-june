@@ -341,7 +341,7 @@ include("head.php");
                                     $order_id = $row['order_id'];
                                 ?>
                                     <input type="hidden" name="index" value="<?php echo $index; ?>">
-                                    <input type="text" name="order_id" value="<?php echo $order_id; ?>">
+                                    <input type="hidden" name="order_id" value="<?php echo $order_id; ?>">
                                 <?php } ?>
                                 <button type="submit">Delete</button>
                             </form>

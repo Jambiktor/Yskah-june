@@ -31,7 +31,7 @@
 				</div>
 				<div class="pull-right" style="margin-right:10px; margin-top:7px;">
 					<?php
-					if ($chatrow['userid'] == $_SESSION['id']) {
+					if ($chatrow['userid'] == $_SESSION['userid']) {
 					?>
 						<a href="index.php" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Lobby</a>
 						<a href="#delete_room" data-toggle="modal" class="btn btn-danger">Delete Room</a>

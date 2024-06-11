@@ -12,7 +12,6 @@ $result = $conn->query($sql);
 $result_chat = $conn->query($query);
 
 
-
 if ($result->num_rows > 0 && $result_chat->num_rows > 0) {
     $row = $result->fetch_assoc();
     $row2 = $result_chat->fetch_assoc();
@@ -27,7 +26,8 @@ if ($result->num_rows > 0 && $result_chat->num_rows > 0) {
     }
     if ($row['is_admin'] == 1 && $row2['access'] == 1) {
         $_SESSION["username"] = $username;
-        $_SESSION['id'] = $row2['userid'];
+        $_SESSION['userid'] = $row2['userid'];
+        $_SESSION['id'] = $row['id'];
 
         echo "<script>
         alert('Welcome Admin');
@@ -35,7 +35,8 @@ if ($result->num_rows > 0 && $result_chat->num_rows > 0) {
         </script>";
     } else {
         $_SESSION["username"] = $username;
-        $_SESSION['id'] = $row2['userid'];
+        $_SESSION['userid'] = $row2['userid'];
+        $_SESSION['id'] = $row['id'];
         echo "<script>
         alert('Welcome');
         window.location='user_landing_page.php';
